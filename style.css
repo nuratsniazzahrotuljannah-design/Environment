@@ -1,0 +1,773 @@
+/* Navbar */
+#mainHeader {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 1050;
+    transition: all 0.4s ease-in-out;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#mainHeader.scrolled {
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+}
+
+.topbar {
+    background-color:#348b5d;
+    color: white;
+    font-size: 13px;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+}
+
+#mainHeader.scrolled .topbar {
+    margin-top: -40px;
+    opacity: 0;
+}
+
+.navbar { padding: 15px 25px; background: white; }
+.navbar-brand { color: #33951f; font-weight: 700; font-size: 26px; }
+.btn-donate { background-color: #5cb874; color: white; border-radius: 4px; padding: 8px 20px; font-weight: 600; text-decoration: none; }
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Topbar & Navbar --- */
+.topbar {
+    background-color: #2c4a3b; /* Hijau tua gelap */
+    color: white;
+    font-size: 14px;
+}
+
+.navbar-brand {
+    color: #4CAF50 !important;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.btn-donate {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 20px;
+}
+
+.btn-donate:hover {
+    background-color: #388E3C;
+    color: white;
+}
+
+/* --- Hero Carousel --- */
+.hero-slide {
+    height: 90vh; /* Tinggi hero section */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Lapisan gelap agar teks terbaca */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.subtitle {
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-slide p {
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.btn-hero {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 35px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+.btn-hero:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+/* Custom Dots/Indicators */
+.carousel-indicators [button] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+/* Container Kotak Hijau Muda */
+.about-tabs-container {
+    background-color: #e8f5e9; /* Hijau sangat muda sesuai gambar */
+    border-radius: 8px;
+}
+
+/* Style Tombol Tab (About, Mission, Vision) */
+.about-tabs-container .nav-pills .nav-link {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 4px;
+    padding: 8px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+/* Saat Tab Aktif */
+.about-tabs-container .nav-pills .nav-link.active {
+    background-color: #3e5c3e; /* Hijau tua sesuai gambar */
+    color: #ffffff;
+    border-color: #3e5c3e;
+}
+
+/* Judul Kecil di dalam kotak (TENTANG KAMI) */
+.tab-pane h6 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #2c4a3b;
+    margin-bottom: 10px;
+}
+
+/* Tombol Read More di dalam kotak */
+.btn-readmore {
+    background-color: #4CAF50;
+    border: none;
+    font-size: 12px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-readmore:hover {
+    background-color: #388E3C;
+}
+/* Container Utama Feature */
+.feature-section {
+    background-color: #f8f9fa;
+}
+
+/* Kartu Fitur */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Efek Hover pada Card */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Wrapper Gambar */
+.card-img-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.feature-card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Overlay teks di bawah gambar (seperti gambar yang kamu kirim) */
+.card-img-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    text-align: left;
+}
+
+.card-img-overlay-text h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Body kartu (bagian deskripsi) */
+.feature-card .card-body {
+    padding: 20px;
+    border-top: none;
+}
+
+.feature-card .card-body p {
+    line-height: 1.6;
+}
+
+/* Styling Tombol Hijau */
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.btn-success:hover {
+    background-color: #388E3C;
+    border-color: #388E3C;
+}
+/*BAGIAN 5*/
+/* ===== CAUSES SECTION ===== */
+/* Container Utama */
+.services-section {
+  margin-top: -10px; /* Menarik konten ke atas bagian Hero */
+  position: relative;
+  z-index: 10; /* Memastikan kartu berada di atas Hero */
+  padding-bottom: 50px;
+}
+
+/* Styling Kartu */
+.card-cause {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* Teks berada di bawah */
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Overlay Gelap agar Teks Terbaca */
+.card-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 30px 20px;
+  width: 100%;
+}
+
+.badge-category {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #28a745; /* Warna hijau */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-overlay p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+/* Achievement Section Styles */
+.achievement-section {
+    background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    color: white;
+}
+
+.achievement-overlay {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 80px 0;
+}
+
+.text-success-bright {
+    color: #4cd137 !important;
+}
+
+.achievement-desc {
+    max-width: 800px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Bingkai Kotak Utama */
+.stat-outer-box {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px 15px;
+    height: 100%;
+}
+
+.stat-outer-box i {
+    color: white;
+}
+
+/* Bingkai Angka (Dashed/Putus-putus sesuai gambar) */
+.stat-inner-box {
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+.counter {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4cd137;
+}
+
+.btn-join-us {
+    background-color: #2c7a51; /* Warna hijau sesuai gambar */
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 0; /* Membuat sudut tombol menjadi kotak tajam */
+    text-transform: capitalize; /* Agar tulisan tidak otomatis kapital semua jika tidak diinginkan */
+    transition: 0.3s;
+}
+
+.btn-join-us:hover {
+    background-color: #218838;
+    color: white;
+}
+/* Styling Utama Section */
+.recent-causes-title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.recent-causes-desc {
+    line-height: 1.8;
+}
+
+/* Styling Kartu Donasi */
+.donation-card {
+    border: none;
+    overflow: hidden;
+    border-radius: 10px; /* Membuat ujung kartu membulat */
+    transition: 0.3s;
+}
+
+.donation-card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Tombol Donate Now di atas Gambar */
+.btn-donate-now {
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Bagian Tubuh Kartu (Warna Hijau Persis Gambar) */
+.donation-card-body {
+    background-color: #436850; /* KUNCI WARNA: Hijau medium-tua */
+}
+
+.donation-stats span {
+    display: inline-block;
+}
+
+/* Penyesuaian Responsif Layar */
+@media (max-width: 991px) {
+    .recent-causes-title {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .donation-card {
+        margin-bottom: 20px;
+    }
+}
+/* Styling Utama Section */
+.recent-causes-title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.recent-causes-desc {
+    line-height: 1.8;
+}
+
+/* Styling Kartu Donasi */
+.donation-card {
+    border: none;
+    overflow: hidden;
+    border-radius: 10px; /* Membuat ujung kartu membulat */
+    transition: 0.3s;
+}
+
+.donation-card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Tombol Donate Now di atas Gambar */
+.btn-donate-now {
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Bagian Tubuh Kartu (Warna Hijau Persis Gambar) */
+.donation-card-body {
+    background-color: #436850; /* KUNCI WARNA: Hijau medium-tua */
+}
+
+.donation-stats span {
+    display: inline-block;
+}
+
+/* Penyesuaian Responsif Layar */
+@media (max-width: 991px) {
+    .recent-causes-title {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .donation-card {
+        margin-bottom: 20px;
+    }
+}
+/*BAGIAN 6*/
+/* ===== UPCOMING EVENTS ===== */
+
+#eventCarousel .carousel-item {
+    transition: transform 1.2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+#eventCarousel .card-wrapper {
+    padding: 0 12px;
+    height: 100%;
+}
+
+.nav-arrow {
+    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border: none;
+}
+
+.nav-arrow:hover {
+    background-color: #2d5a34 !important;
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    display: none;
+}
+
+.category-label {
+    color: #6fb586;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    color: #334b35;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.card {
+    border-radius: 0; /* Kotak siku sesuai gambar */
+    overflow: hidden;
+}
+
+.card-header-img img {
+    border-radius: 0;
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+}
+
+/* Overlay di atas gambar untuk tanggal dan icon */
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Hitam transparan */
+    color: white;
+    font-size: 0.7rem;
+}
+
+.card-body {
+    padding: 1.25rem 1rem;
+    text-align: left;
+}
+
+.card-title {
+    color: #334b35;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-read-more {
+    background-color: #5cb874;
+    color: white;
+    border-radius: 2px;
+    padding: 5px 15px;
+    font-size: 0.75rem;
+    border: none;
+}
+
+.btn-read-more:hover {
+    background-color: #449d44;
+    color: white;
+}
+/* Styling Galeri */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 350px; /* Atur tinggi gambar agar seragam */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Overlay yang muncul saat di-hover */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(92, 184, 116, 0.85); /* Hijau transparan sesuai tema */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1; /* Muncul saat kursor di atas gambar */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Efek zoom sedikit pada gambar */
+}
+
+.overlay-content {
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .overlay-content {
+    transform: translateY(0);
+}
+/* Styling Volunteer */
+.volunteer-section {
+    background-color: #e9f5ed; /* Warna latar hijau pucat sesuai gambar */
+}
+
+.sub-title {
+    color: #5cb874;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.main-heading {
+    color: #2d4a31;
+    font-weight: 700;
+}
+
+.desc-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.volunteer-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.volunteer-list li {
+    margin-bottom: 8px;
+}
+
+.volunteer-list i {
+    color: #5cb874;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.btn-join {
+    background-color: #5cb874;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 25px;
+    border: none;
+}
+
+/* Efek Hover Volunteer */
+.volunteer-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.volunteer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 184, 116, 0.9); /* Overlay hijau transparan */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(100%); /* Muncul meluncur dari bawah */
+}
+
+.volunteer-card:hover .volunteer-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-links a {
+    color: white;
+    font-size: 1rem;
+}
+/* Styling Utama Footer */
+.main-footer {
+    background-color: #1a1a1a; /* Warna latar gelap sesuai gambar */
+    color: #b0b0b0; /* Warna teks abu-abu terang */
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.footer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Link Navigasi di Footer */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer-links li i {
+    font-size: 0.7rem;
+    margin-right: 8px;
+    color: #b0b0b0;
+}
+
+.footer-links li:hover {
+    color: #5cb874; /* Warna hijau saat hover */
+}
+
+/* Newsletter Box */
+.newsletter-box input {
+    background-color: #ffffff;
+    border: none;
+    font-size: 0.85rem;
+    border-radius: 2px 0 0 2px;
+}
+
+.btn-signup {
+    background-color: #5cb874; /* Warna hijau khas lingkungan */
+    color: white;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0 15px;
+    border-radius: 0 2px 2px 0;
+}
+
+.btn-signup:hover {
+    background-color: #449d44;
+}
+
+/* Galeri di Footer */
+.gallery-footer img {
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    /* Tambahan agar ukuran sama */
+    width: 100%;
+    height: 80px;
+    object-fit: cover;    
+    object-position: center; 
+}
+
+.gallery-footer img:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+
+/* Baris Bawah (Copyright) */
+.copyright-text {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.social-footer i {
+    font-size: 0.9rem;
+    color: #777;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-footer i:hover {
+    color: #ffffff;
+}
